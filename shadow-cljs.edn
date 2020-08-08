@@ -1,22 +1,14 @@
 {:deps true ;; deps come from deps.edn
  :nrepl
- {:middleware [refactor-nrepl.middleware/wrap-refactor]
-  :port       9991}
+ {:port 9991}
 
  :build-defaults
- {:compiler-options {:infer-externs :auto}
-  :output-dir       "resources/public/cljs"
-  :asset-path       "/cljs"
-  :release-version  "min"
-  :release          {:compiler-options
-                     {:elide-asserts   true
-                      :pseudo-names    false
-                      :pretty-print    false
-                      :closure-defines {"goog.DEBUG" false}}}
-  :devtools         {:loader-mode     :eval
-                     :ignore-warnings true
-                     :hud             #{:errors :progress}}}
+ {:output-dir      "resources/public/cljs"
+  :asset-path      "/cljs"
+  :release-version "min"
+  :devtools        {:ignore-warnings true
+                    :hud #{:errors :progress}}}
  :builds
- {:app {:target   :browser
-        :modules  {:app {:entries [clj-and-cljs-app.app]}}
+ {:app {:target :browser
+        :modules {:app {:init-fn clj-and-cljs-app.app/init}}
         :devtools {:watch-dir "resources/public"}}}}
