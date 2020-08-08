@@ -1,0 +1,8 @@
+{
+    "name": "Clj-Cljs-App",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "shadow-cljs": "^2.10.14"
+    }
+}

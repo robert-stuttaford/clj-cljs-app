@@ -1,0 +1,21 @@
+<configuration debug="false">
+  <!-- prevent per-message overhead for jul logging calls, e.g. Hornet -->
+  <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+    <resetJUL>true</resetJUL>
+  </contextListener>
+
+  <logger name="ch.qos.logback" level="ERROR"/>
+  <logger name="org.eclipse.jetty" level="ERROR"/>
+  <logger name="datomic" level="WARN"/>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level - %logger{36} - %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="STDOUT"/>
+  </root>
+
+</configuration>
