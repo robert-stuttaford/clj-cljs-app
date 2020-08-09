@@ -1,6 +1,7 @@
 (ns clj-and-cljs-app.app)
 
-(defn ^:dev/after-load ^:export refresh []
+(defn ^:dev/after-load refresh []
   (println "Reloading app"))
 
-(refresh)
+(defn init []
+  (refresh))
