@@ -25,6 +25,8 @@ A Makefile, to encapsulate the various commands that make this all happen.
 
 ## Clojure and ClojureScript REPL in action
 
+Run `npm install`. You only need to do this bit once (unless you add/upgrade versions to `package.json`).
+
 Run `make`.
 This will start a shadow-cljs REPL capable of both pure Clojure and Clojure+ClojureScript repl connections from Emacs.
 
