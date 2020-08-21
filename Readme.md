@@ -2,6 +2,11 @@
 
 An extraction of our main app at Cognician.
 
+## Minimum Requirements
+
+A JDK supporting the [Java Platform Module System][illegal-access-faq] (>= JDK 9).
+If your distro's default JDK is version 8 or older, you will need to [upgrade][migrate-to-jdk-11] before building this app.
+
 ## Usage
 
 Clone this repo, run the commands explained below to see it in action, and then use it as a reference to create (or alter) your own app.
@@ -71,3 +76,8 @@ Clojurians Slack: No specific one, but `#emacs` will probably help!
 <https://shadow-cljs.github.io/docs/UsersGuide.html>
 
 Clojurians Slack: `#shadow-cljs`
+
+
+<!-- JDK help topics -->
+[illegal-access-faq]: https://clojure.org/guides/faq#illegal_access
+[migrate-to-jdk-11]: https://www.deps.co/blog/how-to-upgrade-clojure-projects-to-use-java-11
