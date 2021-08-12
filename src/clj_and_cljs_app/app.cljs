@@ -5,3 +5,7 @@
 
 (defn init []
   (refresh))
+
+(comment
+  (js/window.alert "Hi from the repl")
+  )

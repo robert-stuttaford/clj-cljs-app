@@ -3,10 +3,10 @@
 all: dev
 
 repl:
-	clojure -A:cljs:dev clj-repl
+	clojure -M:cljs:dev clj-repl
 
 dev:
-	clojure -A:cljs:dev clj-run build/run
+	clojure -M:cljs:dev clj-run build/run
 
 http:
 	cd resources/public && python -m SimpleHTTPServer
@@ -19,8 +19,8 @@ clean:
 
 release-cljs:
 	@echo "Build release js"
-	clojure -A:cljs release app --config-merge '{:output-dir "target/cljs"}'
+	clojure -M:cljs release app --config-merge '{:output-dir "target/cljs"}'
 
 debug-cljs:
 	@echo "Build release debug js"
-	clojure -A:cljs release app --debug --config-merge '{:output-dir "target/cljs"}'
+	clojure -M:cljs release app --debug --config-merge '{:output-dir "target/cljs"}'
